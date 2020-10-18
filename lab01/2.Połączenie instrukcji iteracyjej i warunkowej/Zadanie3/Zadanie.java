@@ -15,7 +15,7 @@ class Zadanie
         for(int i=0; i<n; i++){
             ciag[i]=scan.nextDouble();
         }
-        System.out.println("\nPodwojona suma podanych licz wynosi:");
+       
         int licznikdodatnich = 0;
         int licznikujemnych = 0;
         int liczbazer = 0;
