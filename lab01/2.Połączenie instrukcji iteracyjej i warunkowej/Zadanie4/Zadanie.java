@@ -2,7 +2,7 @@ import java.util.Scanner;
 class Zadanie {
     public Zadanie()
     {
-        double[] ciag;
+       double[] ciag;
         Scanner scan = new Scanner(System.in);
         System.out.print("Podaj liczbę naturalną: ");
         int n = scan.nextInt();
@@ -13,15 +13,19 @@ class Zadanie {
         for(int i=0; i<n; i++){
             ciag[i]=scan.nextDouble();
         }
-        System.out.println("\nPodwojona suma podanych licz wynosi:");
-        int wynik = 0;
         for (int i=0;i<n;i++)
         {
-            if(ciag[i]>0)
+            for(int j = i+1;j<n;j++)
             {
-                wynik +=ciag[i];
+                if (ciag[i]>ciag[j])
+                {
+                    double pomocnicza = ciag[i];
+                    ciag[i] = ciag[j];
+                    ciag[j] = pomocnicza;
+                }
             }
         }
-        System.out.print(wynik*2);
+        System.out.println("Najmniejsza podana liczba wynosi: " + ciag[0]);
+        System.out.println("Najwieksza podana liczba wynosi:  " + ciag[n-1]);
     }
 }
