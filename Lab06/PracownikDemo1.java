@@ -1,0 +1,2 @@
+public class PracownikDemo1 {
+}
